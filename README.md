@@ -53,7 +53,7 @@ Before you begin, make sure you have the following installed:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/questionnaire-backend.git
+   git clone https://github.com/yaseen-rock/Effizent-Forms.git
    cd questionnaire-backend
 
 2. Installation
