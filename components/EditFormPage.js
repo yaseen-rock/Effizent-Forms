@@ -1,9 +1,10 @@
-// components/EditFormPage.js
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import API_URL from '../config';
 import styles from '../styles/form.module.css';
 import Logo from './Logo';
+import axios from 'axios';
+import { editConfirmationEmail } from './email/EditedEmail';
 
 function EditFormPage() {
   const router = useRouter();
@@ -15,6 +16,41 @@ function EditFormPage() {
     username: '',
   });
 
+  const sendEditedEmail = async (formData) => {
+    const apiKey = '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'; // Replace with your Brevo API key
+    const emailHtml = editConfirmationEmail(formData);
+    const emailData = {
+      sender: {
+        name: 'Effizent Pvt Ltd',
+        email: 'sender@example.com',
+      },
+      to: [
+        {
+          email: formData.email,
+          name: formData.name,
+        },
+      ],
+      subject: 'Edited Form',
+      htmlContent: emailHtml,
+    
+};
+
+    try {
+      const response = await axios.post('https://api.sendinblue.com/v3/smtp/email', emailData, {
+        headers: {
+          'accept': 'application/json',
+          'api-key': apiKey,
+          'content-type': 'application/json',
+        },
+      });
+
+      console.log('Confirmation email sent successfully:', response.data);
+    } catch (error) {
+      console.error('Error sending confirmation email:', error);
+    }
+  };
+
+
   const handleSubmit = async () => {
     const response = await fetch(`${API_URL}/user/${router.query.username}`, {
       method: 'PUT',
@@ -25,6 +61,7 @@ function EditFormPage() {
     });
 
     if (response.ok) {
+      sendEditedEmail(formData);
       router.push('/result');
     }
   };

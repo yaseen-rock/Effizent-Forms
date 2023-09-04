@@ -13,7 +13,7 @@ function Homepage({ handleFormRedirect }) {
           <ul>
             {/* Logo */}
            <Link href="#">
-            <img src="https://hanabitech.com/_next/static/media/hanabi-logo.6daf3fa3.svg" alt="Logo" className={styles.logo} />
+            <img src="https://www.effizentseele.com/images/logo.png" alt="Logo" className={styles.logo} />
           </Link>
             <li><Link href="#">Home</Link></li>
             <li><Link href="#">About</Link></li>
@@ -23,7 +23,7 @@ function Homepage({ handleFormRedirect }) {
       </header>
       <section className={styles.hero}> {/* Apply the CSS module class */}
         <div className={styles.heroContent}> {/* Apply the CSS module class */}
-          <h1>Welcome to Hanabi</h1>
+          <h1>Welcome to Effizent</h1>
           <p>Explore our creative and innovative projects</p>
           {/* Input Form */}
           <form className={styles.inputForm} onSubmit={(e) => { e.preventDefault(); handleFormRedirect(username); }}>
