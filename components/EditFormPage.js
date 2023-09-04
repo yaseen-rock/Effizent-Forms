@@ -17,7 +17,7 @@ function EditFormPage() {
   });
 
   const sendEditedEmail = async (formData) => {
-    const apiKey = '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'; // Replace with your Brevo API key
+    const apiKey = 'Brevo api key'; // Replace with your Brevo API key
     const emailHtml = editConfirmationEmail(formData);
     const emailData = {
       sender: {
