@@ -22,17 +22,47 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Questionnaire Backend Project
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Welcome to the Questionnaire Backend Project! This project provides the backend API for managing user data and questionnaire responses.
 
-## Installation
+## Table of Contents
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+This project aims to provide a backend solution for managing user data and questionnaire responses. It utilizes [technologies/libraries you're using] to create a robust and scalable API.
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) 
+- [MongoDB](https://www.mongodb.com/) 
+
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/questionnaire-backend.git
+   cd questionnaire-backend
+
+2. Installation
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+3. Running the app
 
 ```bash
 # development
@@ -45,7 +75,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+4. Test
 
 ```bash
 # unit tests
@@ -64,9 +94,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Author - Yaseen
 - Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
